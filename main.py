@@ -33,8 +33,9 @@ def mp3():
     url=video_link.get()
     folder=download_path.get()
     get_video=YouTube(url)
-    get_stream=get_video.streams.get_audio_only()
-    get_stream.download(folder)
+    get_stream = get_video.streams.get_highest_resolution()
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
     messagebox.showinfo("Erfolgreich Abgeschlossen","Der Download wurde Erfolgreich Abgeschlossen du findest dein video in\n"+folder)
 root = tk.Tk()
 root.geometry("420x190")
