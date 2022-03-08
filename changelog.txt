@@ -1,0 +1,8 @@
+Changelog von Youtube Downloader mit GUI
+
+0.1 
+hinzufügen von gui und buttons 
+youtube Video Downloader hinzugefügt
+Youtube Musik Downloader Hinzugefügt
+0,2
+wechsel von pytube zu youtube_dl
