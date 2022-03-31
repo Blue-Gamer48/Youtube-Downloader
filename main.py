@@ -4,6 +4,15 @@ from tkinter import ttk
 from pytube import YouTube
 from tkinter import filedialog, messagebox
 from tkinter.messagebox import showinfo
+ydl_opts = {
+        'format': 'bestaudio/best',
+        'extractaudio': True,
+        'audioformat': 'mp3',
+        'outtmpl': '%(title)s.f%(format_id)s.%(ext)s',
+        'ignoreerrors': False,
+        'noplaylist': True,
+        'restrictfilenames': True,
+    }
 def createWidgets():
     link_label = Label(root, text="YutubeURL:", bg="#03c9ff")
     link_label.grid(row=1, column=0, pady=1, padx=30, )
